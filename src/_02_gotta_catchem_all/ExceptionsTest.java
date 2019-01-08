@@ -33,6 +33,13 @@ class ExceptionsTest {
 	@Test
 	public void testDivideByZeroException() {
 		
+		try {
+			//assertEquals(5, em.divide(10, 2));
+			assertEquals(5, em.divide(10, 0));
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
 	}
 	
 	//4. In the ExceptionMethods class, write a method called reverseString that takes a
@@ -42,9 +49,14 @@ class ExceptionsTest {
 	//5. Complete the JUnit test method to test the reverseStringMethod.
 	@Test
 	public void testReverseString() {
+		try {
+			assertEquals("rac",em.reverseString(""));
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
 		
 	}
-	
 	
 	
 
